@@ -1,7 +1,7 @@
 import pygame
-
 import shoot
 import ufoner
+
 
 window = pygame.display.set_mode((800,500))
 
@@ -18,12 +18,11 @@ chel = shoot.shoot(48,437,50,60,1,("rocket.png"))
 enemies = []
 enemies.append(ufoner.ufoner(50, 0,50,50,1,"asteroid (1).png"))
 enemies.append(ufoner.ufoner(123, 0,50,50,1,"asteroid (1).png"))
+enemies.append(ufoner.ufoner(233, 42,50,50,1,"asteroid (1).png"))
 
 game = True
 
-
-
-
+walls = []
 
 while game:
     for event in pygame.event.get():
@@ -38,6 +37,13 @@ while game:
     for enemy in enemies:
         enemy.muve()
     window.fill((123,123,123))
+
+    for wall in walls:
+        if enemies.hit_box.colliderect((chel.rect)):
+            game = False
+
+        if enemies.hit_box.colliderect((ufoner.rect)):
+            game = False
 
     window.blit(fone, (0, 0))
     chel.render(window)
