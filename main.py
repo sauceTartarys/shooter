@@ -23,7 +23,6 @@ enemies.append(ufoner.ufoner(123, 0,50,50,1,"asteroid (1).png"))
 enemies.append(ufoner.ufoner(233, 42,50,50,1,"asteroid (1).png"))
 
 
-
 game = True
 
 

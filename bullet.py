@@ -14,6 +14,7 @@ class bullet:
 
     def render(self, window):
         pygame.draw.rect(window, (255, 0, 0), self.hit_box)
+
         window.blit(self.texture, (self.hit_box.x, self.hit_box.y))
 
 
@@ -22,3 +23,5 @@ class bullet:
 
         if self.hit_box.y > 500:
             self.hit_box.y = -50
+
+

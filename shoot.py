@@ -33,3 +33,6 @@ class shoot:
             is_step = True
         if keys[pygame.K_o]:
             self.bullets.append(bullet.bullet(self.hit_box.x,  self.hit_box.y,20,20,5,("bullet.png")))
+
+
+
