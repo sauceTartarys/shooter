@@ -4,6 +4,7 @@ import pygame
 
 class ufoner:
     def __init__(self, x, y,w,h, speed, texture):
+        self.rect = pygame.Rect(x, y, w, h)
         self.speed = speed
         self.texture = pygame.image.load(texture)
         self.texture = pygame.transform.scale(self.texture,(w, h))

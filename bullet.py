@@ -15,3 +15,11 @@ class bullet:
     def render(self, window):
         pygame.draw.rect(window, (255, 0, 0), self.hit_box)
         window.blit(self.texture, (self.hit_box.x, self.hit_box.y))
+
+
+
+    def muve(self):
+        self.hit_box.y -= self.speed
+
+
+

@@ -17,12 +17,14 @@ class shoot:
     def render(self, window):
         pygame.draw.rect(window,(255,0,0), self.hit_box)
         window.blit(self.texture,( self.hit_box.x,  self.hit_box.y))
-        for bullet in self.bullets:
-            bullet.render(window)
+        for b in self.bullets:
+            b.render(window)
 
 
 
     def muve(self):
+        for b in self.bullets:
+            b.muve()
         keys = pygame.key.get_pressed()
         is_step = False
         if keys[pygame.K_d]:
@@ -32,7 +34,7 @@ class shoot:
             self.hit_box.x -= self.speed
             is_step = True
         if keys[pygame.K_o]:
-            self.bullets.append(bullet.bullet(self.hit_box.x,  self.hit_box.y,10,1,1,("bullet.png")))
+            self.bullets.append(bullet.bullet(self.hit_box.x,  self.hit_box.y,20,20,1,("bullet.png")))
 
 
 
