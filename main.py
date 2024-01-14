@@ -66,6 +66,10 @@ while game:
             game = False
 
 
+
+
+
+
     window.blit(fone, (0, 0))
     chel.render(window)
     for i in range(len(enemies)):
