@@ -11,6 +11,7 @@ class ufoner:
         self.hit_box.y = y
         self.texture = pygame.transform.scale(self.texture,(w,h))
 
+
     def render(self, window):
         pygame.draw.rect(window, (255, 0, 0), self.hit_box)
         window.blit(self.texture, (self.hit_box.x, self.hit_box.y))
